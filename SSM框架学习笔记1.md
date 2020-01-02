@@ -1,20 +1,54 @@
-##Spring
+# Spring
 
-在Spring中，一切Java资源都是JavaBean
+**在Spring中，一切Java资源都是JavaBean**
 
-#Spring IoC（控制反转）
+### Spring IoC（控制反转）
 
-1 Spring IoC---管理Bean及其之间的关系
+* Spring IoC---管理Bean及其之间的关系
 
-2 各个Java Bean之间存在一定依赖关系
+* 各个Java Bean之间存在一定依赖关系
 
-3 Spring依靠描述来完成对象的创建及其依赖关系（通过配置方式）
+* Spring依靠描述来完成对象的创建及其依赖关系（通过配置方式）将Bean之间的依赖关系解耦
 
-   将Bean之间的依赖关系解耦
+### Spring AOP（面向切面编程）
 
-#Spring AOP（面向切面编程）
+* Spring AOP---管理在切面上某些对象之间的协作
 
-1 Spring AOP---管理在切面上某些对象之间的协作
+* 常用于数据库事务的编程（只要Spring接受到异常信息，将数据库事务回滚，保证数据一致性）  
 
-2 常用于数据库事务的编程（只要Spring接受到异常信息，将数据库事务回滚，保证数据一致性）  
+### MyBatis
+
+**ORM框架---对象关系映射（通过XML或注解提供映射规则）  将数据库的表与POJO映射**
+
+* MyBatis---Java持久框架首选，不再屏蔽SQL
+
+* MyBatis需要提供接口和SQL
+
+* MyBatis可自由书写SQL、支持动态SQL、处理列表、动态生成表名、支持存储过程
+
+* 可实现系统的性能优化和满足各类需求，但工作量稍大
+
+### Hibernate
+
+* 设计理念是完全面向POJO的，基本不需编写SQL即可通过映射关系来操作数据库，属于全表映射
+
+* 配置不需要接口和SQL，不需编写大量的SQL
+
+* 难以处理多表关联，性能难以优化
+
+**综上，对性能要求不高的系统---Hibernate/对于性能要求高，响应快，灵活的系统---MyBatis**
+
+### Spring MVC(Model View Controller)
+
+* 将应用程序（输入逻辑、业务逻辑、UI逻辑）分成不同方面，提供这些元素之间的松耦合
+* Model(模型)---封装应用程序的数据和由它们组成的POJO
+* View(视图)---负责将模型数据渲染到视图上，将数据以一定形式展现给用户
+* Controller(控制器)---负责处理用户请求，通过其提供的视图解析器找到对应的视图进行渲染
+* SpringMVC重点在于它的流程和一些重要 的注解
+
+
+
+
+
+
 
