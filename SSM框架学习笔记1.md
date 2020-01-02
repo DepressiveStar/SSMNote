@@ -38,7 +38,7 @@
 
 **综上，对性能要求不高的系统---Hibernate/对于性能要求高，响应快，灵活的系统---MyBatis**
 
-### Spring MVC(Model View Controller)
+### Spring MVC
 
 * 将应用程序（输入逻辑、业务逻辑、UI逻辑）分成不同方面，提供这些元素之间的松耦合
 
@@ -63,4 +63,16 @@
   * MultiUtility工具
 
 * 主要应用于互联网高并发及需要高速处理数据的场合，保证并发数据安全和一致性
+
+### SSM框架+Redis各自承担功能
+
+* SpringIoC 资源管理、整合、即插即拔
+* SpringAOP 提供切面管理，特别是数据库事务管理功能
+* SpringMVC 将模型、视图和控制器分层，组合成有机灵活的系统
+* MyBatis 提供数据库访问的持久层，通过MyBatis-Spring项目，实现与Spring无缝对接
+* Redis 作为缓存工具，提供高速处理数据和缓存数据功能，极大提升系统性能和响应能力
+
+
+
+
 
