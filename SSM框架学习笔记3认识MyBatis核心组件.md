@@ -26,3 +26,16 @@
 * SQL Mapper
 
   由一个Java接口和XML文件构成，需要给出对应的SQL和映射规则，负责发送SQL去执行，并返回结果
+
+### SqlSessionFactory（工厂接口）
+
+* 使用MyBatis首先是使用配置或代码生产SqlSessionFactory
+
+  * 通过读取配置的XML文件的形式生成SqlSessionFactory**（推荐）**
+
+  * 通过Java代码形式生成SqlSessionFactory
+
+* 通过Configuration类对象构建整个MyBatis的上下文
+* 在MyBatis中存在两个实现类：
+  * SqlSessionManager（多线程环境）
+  * DefaultSqlSessionFactory（具体实现）
