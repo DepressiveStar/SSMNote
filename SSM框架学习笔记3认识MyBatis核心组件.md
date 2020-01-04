@@ -8,3 +8,21 @@
   * 不屏蔽SQL，可对其优化改造，提高系统性能
   * 提供强大、灵活的映射机制，提供动态SQL功能
   * 提供使用Mapper的接口编程，只要一个接口和一个XML就能创建映射器，简化工作
+
+### MyBatis的核心组件
+
+* SqlSessionFactoryBuilder(构造器)
+
+  根据配置或代码生成SqlSessionFactory，采用的是分步构建的Builder模式
+
+* SqlSessionFactory（工厂接口）
+
+  依靠它来生成SqlSession，使用的是工厂模式
+
+* SqlSession（会话）
+
+  既可发送SQL执行返回结果，也可获取Mapper的接口
+
+* SQL Mapper
+
+  由一个Java接口和XML文件构成，需要给出对应的SQL和映射规则，负责发送SQL去执行，并返回结果
