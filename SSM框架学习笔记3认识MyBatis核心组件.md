@@ -39,3 +39,11 @@
 * 在MyBatis中存在两个实现类：
   * SqlSessionManager（多线程环境）
   * DefaultSqlSessionFactory（具体实现）
+
+* SqlSessionFactory的唯一作用是生产MyBatis的核心接口对象SqlSession
+
+#### 使用XML构建SqlSessionFactory
+
+* XML分为两类
+  * 基础配置文件，通常只有1个，主要配置最基本的上下文参数和运行环境
+  * 映射文件，配置映射关系、SQL、参数等信息
