@@ -85,3 +85,7 @@
 
 ### 生命周期
 
+* SqlSessionFactoryBuilder只存在于创建SqlSessionFactory中，创建成功后，失去作用
+* SqlSessionFactory存在于整个MyBatis应用中，尽量使用单例
+* SqlSession存在于一个业务申请中，处理完整个请求后，关闭该连接，归还给SqlSessionFactory
+* Mapper由SqlSession创建，生命周期小于等于SqlSession的生命周期，随着SqlSession的关闭而消失
