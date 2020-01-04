@@ -47,3 +47,23 @@
 * XML分为两类
   * 基础配置文件，通常只有1个，主要配置最基本的上下文参数和运行环境
   * 映射文件，配置映射关系、SQL、参数等信息
+
+* MyBatis基础配置文件
+  * <typeAlias>元素定义一个别名，在MyBatis上下文中使用别名代替全限定名
+  * <environment>元素，其中<transactionManager>元素是配置事务管理器，<dataSource>元素配置数据库
+  * <mapper>元素代表引入的映射器
+
+### SqlSession
+
+* 在MyBatis中，SqlSession是其核心接口，其作用类似于JDBC的Connection对象
+
+  代表一个连接资源的启用
+
+* 其具体作用有3个
+  * 获取Mapper接口
+  * 发送SQL给数据库
+  * 控制数据库事务
+
+### 映射器
+
+* 映射器是
