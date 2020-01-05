@@ -35,3 +35,17 @@
 
 ### ObjectFactory （对象工厂）
 
+* 创建结果集时，MyBatis会使用一个对象工厂完成创建这个结果集实例
+
+### environments （运行环境）
+
+* 主要作用是配置数据库信息
+* 可配置元素：事务管理器（transactionManager）、数据源（dataSource）
+
+* 事务管理器主要工作是提交、回滚、关闭数据库事务
+* 事务管理器可配置成JDBC和MANAGED方式
+* 数据源包含3种：UNPOOLED、POOLED、JNDI
+  * UNPOOLED采用非数据库池管理方式，每次请求都会打开新的数据库连接
+  * POOLED利用“池”的概念，无须再建立和验证数据库连接
+  * JNDI主要是为了能在EJB或应用服务器这类容器中使用
+
