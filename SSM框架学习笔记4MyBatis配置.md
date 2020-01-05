@@ -49,3 +49,15 @@
   * POOLED利用“池”的概念，无须再建立和验证数据库连接
   * JNDI主要是为了能在EJB或应用服务器这类容器中使用
 
+### databaseldProvider 数据库厂商标识
+
+* 多数据库SQL需要配置databaseldProvidetype的属性
+
+### 引入映射器的方法
+
+* 引入映射器的方法
+  * 用文件路径引入映射器
+  * 用包名引入映射器
+  * 用类注册引入映射器
+  * 用userMapper.xml引入映射器
+
