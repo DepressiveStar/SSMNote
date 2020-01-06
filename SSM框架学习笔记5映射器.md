@@ -26,6 +26,10 @@
 * 使用resultMap映射结果集
 * MyBatis内置专门处理分页的类--RowBounds,其原理是执行SQL的查询后，按照偏移量和限制条数返回查询结果，对于大量的数据查询，性能并不佳
 
-### sql元素
+* sql元素可定义SQL的一部分，方便后面的SQL引用
 
-sql元素可定义SQL的一部分，方便后面的SQL引用
+* MyBatis在存储过程中存在：输入参数（IN），输出参数（OUT），输入输出参数（INOUT）3种类型
+
+* 特殊字符串的替换和处理（#和$）
+
+>select $ {columns｝from t_tablename
