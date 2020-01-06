@@ -49,3 +49,13 @@
 * 保证lazyLoadingEnabled=true 和aggressiveLazyLoading=false 的前提下，fetchType对相应的级联元素进行具体配置
   * eager 获得当前POJO后立即加载对应的数据
   * lazy 获得当前POJO后延迟加载对应的数据
+
+* 现实中，多对多级联通常拆分成两个一对多级联来处理
+
+### 缓存
+
+* MyBatis分为一级缓存和二级缓存
+  * 一级缓存是在SqlSession上的缓存（默认开启）
+  * 二级缓存是在SqlSessionFactory上的缓存
+
+* 缓存要明确cache元素的配置项
