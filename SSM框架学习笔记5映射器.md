@@ -36,7 +36,16 @@
 
 ### 级联
 
-* MyBatis的级联分为3种，不支持多对多级联
-  * 鉴别器 根据某些条件决定采用具体实现类级联的方案
-  * 一对一 学生证和学生
-  * 一对多 班主任和学生
+* MyBatis的级联分为3种，不支持多对多级联 
+  * 鉴别器 根据某些条件决定采用具体实现类级联的方案（discriminator元素）
+  * 一对一 学生证和学生（association元素）
+  * 一对多 班主任和学生（collection元素）
+
+* 为避免N+1问题，浪费数据库资源，MyBatis提供了延迟加载功能
+* 在MyBatis 的settings 配置中存在两个元素可以配置级联
+  * lazyLoadingEnabled 延迟加载的全局开关
+  * aggressiveLazyLoading 启用时，对任意延迟属性的调用会使带有延迟加载属性的对象完整加载，该配置项是层级开关
+
+* 保证lazyLoadingEnabled=true 和aggressiveLazyLoading=false 的前提下，fetchType对相应的级联元素进行具体配置
+  * eager 获得当前POJO后立即加载对应的数据
+  * lazy 获得当前POJO后延迟加载对应的数据
