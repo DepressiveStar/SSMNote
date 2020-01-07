@@ -44,3 +44,12 @@ BuondSql提供3个主要属性
 * sql属性是书写在映射器里的一条被SqlSource解析后的SQL，大部分时候无须修改，只有在使用插件时可根据需要进行改写
 
 ### SqlSession运行过程
+
+MyBatis只用Mapper接口即可运行
+
+原因：Mapper的XML文件的命名空间对应该接口的全限定名
+
+方法：MyBatis根据全路径和方法名，将其和代理对象绑定起来，通过动态代理技术，使该接口运行起来，而后采用命令模式，最后使用SqlSession接口的方法使得它能够执行对应SQL
+
+#### SqlSession下的四大对象
+
