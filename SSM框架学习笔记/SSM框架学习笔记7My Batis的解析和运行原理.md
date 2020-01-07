@@ -53,3 +53,28 @@ MyBatis只用Mapper接口即可运行
 
 #### SqlSession下的四大对象
 
+映射器是动态代理对进入MapperMethod的execute方法，经过简单判断进入SqlSession的delete、update、insert、select等方法
+
+SqlSession 的执行过程是通过Executor 、StatementHandler 、Parame terHandler 和ResultSetHandler 来完成数据库操作和结果返回的，
+
+* Executor（执行器）
+  * 是真正执行Java和数据库交互的对象
+  * 包含3种执行器
+    * SIMPLE 简易执行器，默认使用
+    * REUSE 能够执行重用预处理语句的执行器
+    * BATCH 执行器重用语句和批量更新，批量专用的执行器
+  * 提供查询（query）方法、更新（updete）方法和相关的事务方法
+
+MyBatis将根据配置类型去确定需要创建哪一种Executor
+
+* StatementHandler（数据库会话器）
+
+专门处理数据库会话
+
+* ParameterHandler（参数处理器）
+
+My Batis 是通过ParameterHandler 对预编译语句进行参数设置的，它的作用是完成对预编译参数的设置
+
+* ResultSetHandler（结果处理器）
+
+ResultSetHandler作用是组装结果集返回
