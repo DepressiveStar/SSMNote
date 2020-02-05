@@ -31,3 +31,13 @@ AOP能够确保POJO的简单性
 
 ### Spring容器
 
+容器是Spring框架的核心，Spring容器使用DI管理构成应用的组件，创建相互协作的组件之间的关联。
+
+Spring自带的容器实现归为2种
+
+* bean工厂 是最简单的容器，提供基本的DI支持
+* 应用上下文 基于BeanFactory构建，并提供应用框架级别的服务(**主要**)
+
+创建Spring容器
+
+> ApplicationContext = new ClassPathXmlApplicationContext("knight.xml");
