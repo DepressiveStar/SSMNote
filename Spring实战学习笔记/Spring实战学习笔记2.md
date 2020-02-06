@@ -148,3 +148,27 @@ public CDPlayer cdPlayer(CompactDisc compactDisc){
 ```
 
 实现属性注入
+
+```
+<bean id="cdPlayer" class="soundsystem.CDPlayer">
+  <property name="compactDisc" ref="compactDisc"/>
+</bean>
+```
+
+<property>元素为属性的Setter方法所提供功能与<constructor-arg>元素为构造器所提供的功能是相同的
+
+将字面量注入到属性中
+
+```
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+  <property name="title" value="abc"/>
+  <property name="tracks">
+   <list>
+    <value>aaa</value>
+    <value>bbb</value>
+    <value>ccc</value>
+   </list>
+  </property>   
+</bean>
+```
+
