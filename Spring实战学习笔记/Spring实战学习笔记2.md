@@ -172,3 +172,14 @@ public CDPlayer cdPlayer(CompactDisc compactDisc){
 </bean>
 ```
 
+### 导入和混合配置
+
+通过@Import注解将需要的两个类组合在一起
+
+>@Import(CDConfig.class)
+
+>@Import({CDPlayerConfig.class,CDConfig.class})
+
+通过@ImportResource注解，加载XML文件
+
+> @ImportResource("classpath:cd-config.xml")
