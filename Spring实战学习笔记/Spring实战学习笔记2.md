@@ -23,4 +23,10 @@ Spring从两个角度来实现自动化装配
 >
 > 使用@ComponentScan注解，启用组件扫描，默认扫描与配置类相同的包
 >
-> 在XML中通过<context:component-scan base-package="soundsystem"/> 启用组件扫描
+> 在XML中通过
+>
+> ```
+> <context:component-scan base-package="soundsystem"/>
+> ```
+>
+> 启用组件扫描
