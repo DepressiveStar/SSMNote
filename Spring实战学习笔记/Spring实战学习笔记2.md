@@ -70,3 +70,12 @@ Spring从两个角度来实现自动化装配
 ```
 
 通过@Autowired注解，声明进行自动装配为当前bean注入依赖的bean
+
+```java
+@Autowired
+public CDPlayer(CompactDisc cd){
+  this.cd = cd;
+}
+```
+
+Spring创建CDPlayer bean的时候，通过该构造器进行实例化并传入一个CompactDisc类型的bean
