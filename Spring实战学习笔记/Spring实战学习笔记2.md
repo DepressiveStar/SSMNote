@@ -69,7 +69,7 @@ Spring从两个角度来实现自动化装配
 @ComponentScan(basePackageClasses={CDPlayer.class,DVDPlayer.class})
 ```
 
-通过@Autowired注解，声明进行自动装配为当前bean注入依赖的bean
+通过@Autowired注解，声明进行自动装配为当前bean注入依赖的bean(该注解为Spring特有注解)。**@Inject**注解与其作用相同，来源于Java依赖注入规范
 
 ```java
 @Autowired
@@ -79,3 +79,5 @@ public CDPlayer(CompactDisc cd){
 ```
 
 Spring创建CDPlayer bean的时候，通过该构造器进行实例化并传入一个CompactDisc类型的bean
+
+### 通过Java代码装配bean
