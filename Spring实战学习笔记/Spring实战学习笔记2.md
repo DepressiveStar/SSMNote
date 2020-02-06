@@ -124,4 +124,27 @@ public CDPlayer cdPlayer(CompactDisc compactDisc){
 </bean>
 ```
 
-将字面量注入到构造器中
+将给定值以字面量形式注入到构造器中
+
+```
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+  <constructor-arg value="The Beatles"/>
+</bean>
+```
+
+实现bean引用列表的装配
+
+```
+<bean id="compactDisc" class="soundsystem.BlankDisc">
+  <constructor-arg value="The Beatles"/>
+  <constructor-arg>
+   <list>
+    <value>aaa</value>
+    <value>bbb</value>
+    <value>ccc</value>
+   </list>
+  <constructor-arg>   
+</bean>
+```
+
+实现属性注入
