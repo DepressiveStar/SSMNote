@@ -106,3 +106,22 @@ public CDPlayer cdPlayer(CompactDisc compactDisc){
 
 ### 通过XML装配bean
 
+创建一个XML文件，以<beans>元素为根
+
+可借助Spring Tool Suite创建XML配置文件
+
+声明bean
+
+```java
+<bean id="compactDisc" class="soundsystem.SgtPeppers"/>
+```
+
+构造器注入bean引用
+
+```java
+<bean id="cdPlayer" class="soundsystem.CDPlayer">
+  <constructor-arg ref="compactDisc"/>
+</bean>
+```
+
+将字面量注入到构造器中
