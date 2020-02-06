@@ -81,3 +81,28 @@ public CDPlayer(CompactDisc cd){
 Spring创建CDPlayer bean的时候，通过该构造器进行实例化并传入一个CompactDisc类型的bean
 
 ### 通过Java代码装配bean
+
+通过@Configuration注解表明该类是一个配置类
+
+通过@Bean注解声明bean
+
+```java
+@Bean
+public CompactDisc sgtPeppers(){
+    return new SgtPeppers();
+}
+```
+
+对于依赖于其他bean的bean装配
+
+```java
+@Bean
+public CDPlayer cdPlayer(CompactDisc compactDisc){
+    return newCDPlayer(compactDisc)
+}
+```
+
+通过上述方式引用其他的bean
+
+### 通过XML装配bean
+
