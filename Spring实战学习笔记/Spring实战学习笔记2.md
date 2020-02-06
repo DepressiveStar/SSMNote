@@ -30,3 +30,17 @@ Spring从两个角度来实现自动化装配
 > ```
 >
 > 启用组件扫描
+
+>测试组件扫描功能时
+>
+>```
+>@RunWith(SpringJUnit4ClassRunner.class)
+>```
+>
+>使用上述注解调用Spring的类自动创建Spring的应用上下文
+>
+>```
+>@ContextConfiguration(classes=CDPlayerConfig.class)
+>```
+>
+>使用上述注解在指定类中加载配置
