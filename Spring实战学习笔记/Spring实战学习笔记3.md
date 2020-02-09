@@ -29,7 +29,7 @@ Spring提供@ActiveProfiles注解，指定运行测试时要激活的profile
 
 使用@Conditional注解，给定条件结果为true时，才会创建这个bean
 
-### 处理自动装配的歧义性
+### 处理自动装配的歧义性(首选及限定符)
 
 * @Primary与@Component组合用在组件扫描的bean上，将其声明为首选的bean（设置多个首选bean时无法处理歧义）
 * @Qualifier注解是使用限定符主要方式，与@Autowired和@Inject协同使用，从而在注入时指定注入哪个bean。（只针对基于默认beanID作为限定符）。
