@@ -31,3 +31,5 @@ Spring提供@ActiveProfiles注解，指定运行测试时要激活的profile
 
 ### 处理自动装配的歧义性
 
+* @Primary与@Component组合用在组件扫描的bean上，将其声明为首选的bean
+* @Qualifier注解是使用限定符主要方式，与@Autowired和@Inject协同使用，从而在注入时指定注入哪个bean。
