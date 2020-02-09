@@ -1,6 +1,6 @@
 ## Spring实战学习笔记3
 
-### 环境与profile
+### 环境与profile(解决跨环境部署通用问题)
 
 #### 配置profile bean
 
