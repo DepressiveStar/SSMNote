@@ -39,3 +39,30 @@ Spring提供@ActiveProfiles注解，指定运行测试时要激活的profile
 ### bean的作用域
 
 默认情况下，Spring应用上下文中所有bean是以单例形式创建的
+
+**使用@Scope注解选择其他的作用域**
+
+* 在Web应用中，使用会话和请求作用域需要用到@Scope及其proxyMode属性。
+* 在XML中，通过<bean>元素的scope属性设置bean的作用域，通过Spring aop命名空间设置代理模式
+
+> <aop:scoped-proxy/>
+
+### 运行时值注入
+
+为了避免值注入时的硬编码值情况，使这些值在运行时确定，Spring提供两种运行时求值的方式
+
+* 属性占位符（Property placeholder）
+* Spring表达式语言(SpEL)
+
+处理外部值最简单方式是声明属性源并通过Spring的Environment来检索属性
+
+**Environment**
+
+Environment提供getProperty()方法来获取属性值
+
+getActiveProfiles()获取激活profile名称
+
+getDefaultProfiles()获取默认profile名称
+
+**在Spring装配中，占位符形式为使用${...}包装的属性名称**
+
