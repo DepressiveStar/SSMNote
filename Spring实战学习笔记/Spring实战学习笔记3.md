@@ -2,6 +2,8 @@
 
 ### 环境与profile
 
+#### 配置profile bean
+
 Spring引入bean profile功能，使用profile，首先要将所有不同bean
 
 定义整理到一个或多个profile之中，将应用部署到每个环境时，确保对应的profile处于激活状态
@@ -11,3 +13,21 @@ Spring引入bean profile功能，使用profile，首先要将所有不同bean
 在XML中通过<beans>元素的profile属性配置profile bean
 
 亦可在<beans>元素中嵌套定义<benas>元素，将所有profile bean定义到同一个XML中
+
+#### 激活profile
+
+Spring依赖两个独立属性确定profile的激活状态
+
+* spring.profiles.active
+* spring.profiles.default
+
+Spring提供@ActiveProfiles注解，指定运行测试时要激活的profile
+
+### 条件化的bean
+
+在Spring4.0之后可实现条件化的配置
+
+使用@Conditional注解，给定条件结果为true时，才会创建这个bean
+
+### 处理自动装配的歧义性
+
