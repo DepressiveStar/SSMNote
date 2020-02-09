@@ -31,5 +31,11 @@ Spring提供@ActiveProfiles注解，指定运行测试时要激活的profile
 
 ### 处理自动装配的歧义性
 
-* @Primary与@Component组合用在组件扫描的bean上，将其声明为首选的bean
-* @Qualifier注解是使用限定符主要方式，与@Autowired和@Inject协同使用，从而在注入时指定注入哪个bean。
+* @Primary与@Component组合用在组件扫描的bean上，将其声明为首选的bean（设置多个首选bean时无法处理歧义）
+* @Qualifier注解是使用限定符主要方式，与@Autowired和@Inject协同使用，从而在注入时指定注入哪个bean。（只针对基于默认beanID作为限定符）。
+* 可在bean声明中添加@Qualifier注解创建自定义限定符。
+* 使用自定义限定符注解，该注解本身使用@Qualifier注解来标注。
+
+### bean的作用域
+
+默认情况下，Spring应用上下文中所有bean是以单例形式创建的
