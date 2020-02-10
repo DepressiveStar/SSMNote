@@ -83,3 +83,13 @@ execution(* concert.Perform.perform())and bean('woodstock')
 ### 在XML中声明切面
 
 大多数AOP配置元素必须在< aop:config >元素的上下文内使用
+
+> < aop:before>元素定义前置通知
+>
+> < aop:after-returning>元素定义返回通知
+>
+> < aop:after-throwing>元素定义异常通知
+
+使用< aop:around>元素声明环绕通知
+
+使用< aop:declare-parents>元素引入新方法
