@@ -59,3 +59,27 @@ execution(* concert.Perform.perform())and bean('woodstock')
 ```
 
 ### 使用注解创建切面
+
+使用@Aspect注解标注，表明其不仅是POJO，还是切面
+
+使用@PointCut注解，定义可重用的切点
+
+使用@EnableAspectJ-AutoProxy注解启用自动代理功能
+
+在XML中使用< aop:aspectj-autoproxy/ >元素启用自动代理
+
+环绕通知能够将被通知的目标方法完全包装起来，在一个通知方法中同时编写前置通知和后置通知。
+
+其接受ProceedingJoinPoint作为参数，需要调用proceed()方法
+
+使用@DeclareParents注解将新功能或接口引入到已有bean中
+
+@DeclareParents注解由三部分组成：
+
+* value属性指定哪种类型bean引入该接口
+* defaultImpl属性指定为引入功能提供实现的类
+* @DeclareParents注解标注的静态属性指明要引入的接口
+
+### 在XML中声明切面
+
+大多数AOP配置元素必须在< aop:config >元素的上下文内使用
