@@ -93,3 +93,5 @@ execution(* concert.Perform.perform())and bean('woodstock')
 使用< aop:around>元素声明环绕通知
 
 使用< aop:declare-parents>元素引入新方法
+
+Spring通过aspectOf()方法获得切面的引用，使用Spring的依赖注入为AspectJ切面注入协作者
