@@ -47,3 +47,15 @@ Spring提供4种类型的AOP支持：
 ### 通过切点来选择连接点
 
 execution指示器是编写切点定义时最主要使用的指示器
+
+切点表达式设置当perform()方法执行时触发通知的调用
+
+![](C:\Users\DepressiveStar\Desktop\切点定义.png)
+
+亦可在切点表达式中限制切点匹配特定的bean
+
+```
+execution(* concert.Perform.perform())and bean('woodstock')
+```
+
+### 使用注解创建切面
